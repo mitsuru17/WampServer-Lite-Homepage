@@ -504,13 +504,18 @@ a:hover {
 	vertical-align: top;
 	width: 265px;
 	overflow: hidden;
-	-webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
+	margin: 0 2px;
+	transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
 }
 .projects li:hover {
-	background: lightgray;
+	background: #FFBA61;
+	font-size: 16px;
+	box-shadow: 0 1px 3px #aaa;
+	-webkit-box-shadow: 0 1px 3px #aaa;
+	-moz-box-shadow: 0 1px 3px #aaa;
 }
 .projects li a{
 	overflow: hidden;
