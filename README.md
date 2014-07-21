@@ -4,7 +4,7 @@ WampServer-Lite-Homepage
 Modificación al archivo index.php del Servidor Web WampServer
 
 
-![WampServer-Lite](https://raw.githubusercontent.com/mitsuru17/WampServer-Lite-Homepage/master/wampserver-erios.jpg)
+![WampServer-Lite](https://raw.githubusercontent.com/mitsuru17/WampServer-Lite-Homepage/master/wampserver-erios.png)
 
 Instalación
 --------
