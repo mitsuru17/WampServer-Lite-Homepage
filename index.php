@@ -79,7 +79,7 @@ $langues = array(
 		'autreLangue' => 'Version Française',
 		'autreLangueLien' => 'fr',
 		'titreHtml' => 'WAMPSERVER Homepage',
-		'titreConf' => 'Configuración del Servidor',
+		'titreConf' => 'Estado del Servidor',
 		'versa' => 'Version de Apache:',
 		'doca2.2' => 'httpd.apache.org/docs/2.2/en/',
 		'doca2.4' => 'httpd.apache.org/docs/2.4/en/',
@@ -373,7 +373,7 @@ $pageContents = <<< EOPAGE
 	<title>{$langues[$langue]['titreHtml']}</title>
 	<meta http-equiv="Content-Type" content="txt/html; charset=utf-8" />
 
-	<style type="text/css">
+<style type="text/css">
 * {
 	margin: 0;
 	padding: 0;
@@ -390,6 +390,7 @@ body {
 	background: #eee;
 	position: relative;
 	min-height: 400px;
+	-webkit-font-smoothing: antialiased;
 }
 #head {
 	margin-top: 1.8em;
@@ -522,6 +523,20 @@ a:hover {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+span[data-estado*="online"]{
+	color:green;
+	text-transform: capitalize;
+}
+span[data-estado*="online"]:after{
+	content: '$status';
+}
+span[data-estado*="offline"]{
+	color:red;
+	text-transform: capitalize;
+}
+span[data-estado*="offline"]:after{
+	content: '$status';
+}
 </style>
 	<link rel="shortcut icon" href="index.php?img=favicon" type="image/ico" />
 </head>
@@ -540,8 +555,10 @@ a:hover {
 		<li>Version ${wampserverVersion}</li>
 		<li><a href="?lang={$langues[$langue]['autreLangueLien']}">{$langues[$langue]['autreLangue']}</a></li>
 	</ul>
-
-	<h2 style="margin:0;"> {$langues[$langue]['titreConf']} (${status})</h2>
+	<style>
+		
+	</style>
+	<h2 style="margin:0;"> {$langues[$langue]['titreConf']}: <span data-estado="$status"></span></h2>
 
 	<div class="content">
 		<div>
@@ -575,6 +592,7 @@ a:hover {
 		<li><a href="http://www.wampserver.com">WampServer</a></li>
     	<li><a href="http://www.wampserver.com/en/donations.php">Donate</a></li>
 		<li><a href="http://www.alterway.fr">Alter Way</a></li>
+		<li><a href="https://github.com/mitsuru17/WampServer-Lite-Homepage">Fork Me &hearts;</a></li>
 	</ul>
 	<div style="text-align: center;">Modded by: <a href="https://www.linkedin.com/in/eddyernestorios">Erios</a></div>
 </body>
