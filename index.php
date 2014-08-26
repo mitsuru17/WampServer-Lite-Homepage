@@ -503,7 +503,7 @@ a:hover {
 .projects li{
 	display: inline-block;
 	vertical-align: top;
-	width: 265px;
+	width: 260px;
 	overflow: hidden;
 	margin: 0 2px;
 	transition: all 0.2s;
